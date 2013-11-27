@@ -24,4 +24,4 @@ Build CSS in Javascript!
 ## Options
 
   * `append`: function called to append CSS to buffer. If you override this, the builder's `toString()` function will always return an empty string.
-  * `builder`: base builder object, to which `attrib`, `attribs` and `rule` methods will be added. Defaults to empty object. Allows you to pass in your own object/prototype chain, possibly including macro functions for defining more complex rules.
+  * `builder`: base builder object, to which `attrib`, `attribs`, `rule` and `commit` methods will be added. Defaults to empty object. Allows you to pass in your own object/prototype chain, possibly including macro functions for defining more complex rules.

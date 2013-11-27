@@ -106,6 +106,7 @@ module.exports = function(options) {
     b.attrib        = attrib;
     b.attribs       = attribs;
     b.rule          = rule;
+    b.commit        = commit;
     b.toString      = function() { commit(); return buffer; }
 
     return b;
