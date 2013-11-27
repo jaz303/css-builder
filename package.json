@@ -1,0 +1,21 @@
+{
+  "name": "css-builder",
+  "version": "0.0.0",
+  "description": "Build CSS in Javascript, no preprocessors!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaz303/css-builder.git"
+  },
+  "keywords": [
+    "css",
+    "generate",
+    "builder"
+  ],
+  "author": "Jason Frame <jason@onehackoranother.com> (http://jasonframe.co.uk)",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
