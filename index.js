@@ -60,7 +60,14 @@ module.exports = function(options) {
         } else if (typeof rs === 'function') {
             rs(b);
         } else if (typeof rs === 'object') {
-            attribs(rs);
+            for (var cssKey in rs) {
+                var cssValue = rs[cssKey];
+                if (typeof cssValue === 'object') {
+                    rule(cssKey, cssValue);
+                } else {
+                    attrib(cssKey, cssValue);
+                }
+            }
         } else {
             throw new TypeError("rule must be string, function or object");
         }
