@@ -9,4 +9,13 @@ b.rule('div.foo', function() {
     });
 });
 
+b.rule('a', {
+    span: {
+        backgroundColor: "red"
+    },
+    b: {
+        fontSize: '22px'
+    }
+});
+
 console.log(b.toString());
