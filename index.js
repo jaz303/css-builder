@@ -101,9 +101,15 @@ module.exports = function(options) {
     }
 
     function translateKey(k) {
-        return k.replace(/[A-Z]/g, function(m) {
+        k = k.replace(/[A-Z]/g, function(m) {
             return '-' + m[0].toLowerCase();
         });
+
+        if (k.match(/^(webkit|moz|ms|o|khtml)-/)) {
+            k = '-' + k;
+        }
+
+        return k;
     }
 
     function throwFrozen() {
