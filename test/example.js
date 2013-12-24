@@ -19,4 +19,9 @@ b.rule('a', {
     }
 });
 
+b.rules({
+    'div.a': { color: 'green' },
+    'div.b': { color: 'red' }
+});
+
 console.log(b.toString());

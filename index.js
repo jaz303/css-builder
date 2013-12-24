@@ -21,7 +21,6 @@ module.exports = function(options) {
 
     var buffer          = '',
         _append         = options.append || function(str) { buffer += str; },
-        rules           = [],
         path            = [],
         currSelector    = null,
         lastSelector    = null,
