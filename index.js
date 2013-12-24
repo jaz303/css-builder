@@ -37,7 +37,7 @@ module.exports = function(options) {
     function attribs(as) {
         frozen && throwFrozen();
         for (var k in as) {
-            attrib(k, as[k]);
+            b.attrib(k, as[k]);
         }
         return this;
     }
@@ -47,7 +47,7 @@ module.exports = function(options) {
         frozen && throwFrozen();
 
         if (Array.isArray(rs)) {
-            rs.forEach(function(r) { rule(selector, r); }, b);
+            rs.forEach(function(r) { b.rule(selector, r); });
             return;
         }
 
@@ -58,14 +58,14 @@ module.exports = function(options) {
         if (typeof rs === 'string') {
             append(currSelector, rs);
         } else if (typeof rs === 'function') {
-            rs(b);
+            rs.call(b, b);
         } else if (typeof rs === 'object') {
             for (var cssKey in rs) {
                 var cssValue = rs[cssKey];
                 if (typeof cssValue === 'object') {
-                    rule(cssKey, cssValue);
+                    b.rule(cssKey, cssValue);
                 } else {
-                    attrib(cssKey, cssValue);
+                    b.attrib(cssKey, cssValue);
                 }
             }
         } else {
