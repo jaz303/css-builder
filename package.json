@@ -1,6 +1,6 @@
 {
   "name": "css-builder",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Build CSS in Javascript, no preprocessors!",
   "main": "index.js",
   "directories": {
