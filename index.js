@@ -79,6 +79,12 @@ module.exports = function(options) {
 
     }
 
+    function rules(rs) {
+        for (var k in rs) {
+            b.rule(k, rs[k]);
+        }
+    }
+
     function append(sel, css) {
         if (lastSelector === sel) {
             _append(' ' + css + ';');
@@ -119,6 +125,7 @@ module.exports = function(options) {
     b.attrib        = attrib;
     b.attribs       = attribs;
     b.rule          = rule;
+    b.rules         = rules;
     b.commit        = commit;
     b.toString      = function() { commit(); return buffer; }
 
